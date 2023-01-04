@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: lightgray;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.9s ease;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background: green;
+    color: white;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 9999;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 2px solid white;
+    font-size: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+.scroll-up-btn.show {
+    opacity: 1;
+    bottom: 30px;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    transform: scale(1.125);
+    cursor: pointer;
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(206, 183, 228);
+}
+
+.navBarContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.logo {
+    width: calc(35%);
+    text-align: center;
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo p span {
+    color: red;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+}
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu li a {
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    padding: 3px;
+    background: none;
+    transition: 0.3s ease all;
+}
+
+.menu li a:hover {
+    cursor: pointer;
+    color: green;
+    font-weight: 600;
+}
+
+.signUpBtn {
+    width: 90px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.menu-btn {
+    color: black;
+    font-size: 23px;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 50px;
+    display: none;
+}
+
+.theBtn {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: 0.3s ease all;
+}
+
+.theBtn:hover {
+    background: rgb(73, 168, 73);
+    cursor: pointer;
+}
+
+/* welcome section styling */
+.welcomeSection {
+    width: 100%;
+}
+
+.welcomeSection .welcomeSectionContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.welcomeSection .welcomeSectionContent .text {
+    width: calc(50% - 60px);
+    padding-left: 28px;
+}
+
+.welcomeSection .welcomeSectionContent .text h2 {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 48px;
+}
+
+.welcomeSection .welcomeSectionContent .text p {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.welcomeSection .welcomeSectionContent .text .readMoreBtn {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease all;
+    align-items: center;
+}
+
+.welcomeSection .welcomeSectionContent .text .readMoreBtn i {
+    margin-left: 10px;
+}
+
+.welcomeSection .welcomeSectionContent .text .readMoreBtn .theBtn {
+    height: 100%;
+    width: 100%;
+    background: rgb(51, 102, 51);
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.welcomeSection .welcomeSectionContent .text .readMoreBtn .theBtn:hover {
+    background: none;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.welcomeSection .welcomeSectionContent .welcomeGraphicDesign {
+    background-image: url(images/dw\ marketing\ 1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: calc(50% - 60px);
+}
+
+.services {
+    padding: 100px 0;
+
+}
+
+.services .servicesContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.services .tittle {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.servicesContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services .servicesContent .card {
+    width: calc(25% - 20px);
+    padding: 9px;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: black;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.services .servicesContent .card:hover {
+    background-color: crimson;
+    color: white;
+}
+
+
+.services .servicesContent .card .cardTittle {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.services .servicesContent .card i {
+    font-size: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.services .servicesContent .card p {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.services .servicesContent .card .readMoreBtn {
+    width: calc(40%);
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.services .servicesContent .card .readMoreBtn .theBtn {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    background: green;
+}
+
+.services .servicesContent .card .readMoreBtn .theBtn:hover {
+    color: white;
+    background: none;
+    border: 1px solid white;
+
+}
+
+.about {
+    padding-top: 90px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+.about .aboutContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .aboutContent .welcomeGraphicDesign {
+    background-image: url(images/dw\ marketing\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: calc(50% - 60px);
+}
+
+.about .aboutContent .text {
+    width: calc(50% - 60px);
+}
+
+.about .aboutContent .text h3 {
+    color: green;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.about .aboutContent .text h2 {
+    color: black;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.about .aboutContent .text p {
+    color: black;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.about .aboutContent .text .readMoreBtn {
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about .aboutContent .text .readMoreBtn .myBtn {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    background: green;
+    transition: all 0.3s ease;
+}
+
+.about .aboutContent .text .readMoreBtn .myBtn i {
+    margin-left: 10px;
+}
+
+.about .aboutContent .text .readMoreBtn .myBtn:hover {
+    color: black;
+    background: none;
+    cursor: pointer;
+}
+
+.reviews {
+    width: 100%;
+    padding-top: 90px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.reviews h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.reviews .reviewsContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.reviews .reviewsContent .user {
+    width: calc(70% - 20px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.reviews .reviewsContent .user .clientPic {
+    background-image: url(images/welcomeBg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: calc(30%);
+    height: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.reviews .reviewsContent .user .clientMsg {
+    width: calc(60%);
+    margin-left: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: inset;
+}
+
+.reviews .reviewsContent .user .clientMsg h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.reviews .reviewsContent .user .clientMsg p {
+    color: black;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.reviews .reviewsContent .controls {
+    width: calc(30% - 20px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reviews .reviewsContent .controls .leftArrow,
+.reviews .reviewsContent .controls .rightArrow {
+    height: 70px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 128, 0, 0.664);
+    padding: 6px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.reviews .reviewsContent .controls .leftArrow .iContainer,
+.reviews .reviewsContent .controls .rightArrow .iContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews .reviewsContent .controls .leftArrow i,
+.reviews .reviewsContent .controls .rightArrow i {
+    text-align: center;
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews .reviewsContent .controls .leftArrow:hover,
+.reviews .reviewsContent .controls .rightArrow:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: green;
+    color: black;
+}
+
+.newsletter {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.newsletter .tittle {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.newsletter .newsletterContent p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.newsletter .newsletterContent .email {
+    width: 70%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px gray solid;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+}
+
+.newsletter .newsletterContent .email input {
+    width: 80%;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    text-align: center;
+}
+
+.newsletter .newsletterContent .email .subscribeBtn {
+    width: 20%;
+    height: 100%;
+}
+
+.newsletter .newsletterContent .email .subscribeBtn .btn {
+    width: 100%;
+    height: 100%;
+    background: green;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.newsletter .newsletterContent .email .subscribeBtn .btn:hover {
+    background: none;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+footer .footerContent h3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: red;
+}
+
+footer .footerContent h3 span {
+    color: blue;
+}
+
+footer .logos {
+    width: 20%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    margin-bottom: 40px;
+
+}
+
+footer .logos i {
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+    transition: all ease 0.5s;
+}
+
+footer .logos i:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+footer .footerContent p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+footer .bottomDiv {
+    text-align: center;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    background-color: rgb(181, 153, 207);
+    color: black;
+    margin-bottom: 1px;
+}
+
+/* responsiveness */
+
+/*tablet view*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navBar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu{ 
+        margin-left: 0px;
+    }
+    .menu li a {
+        margin-left: 10px;
+        font-size: 17px;
+    }
+
+    .logo {
+        width: calc(20%);
+        text-align: center;
+    }
+
+    .logo p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .services .servicesContent .card {
+        width: calc(50% - 20px);
+        margin-top: 25px;
+    }
+
+    .reviews .reviewsContent .user {
+        width: calc(80%);
+    }
+
+    .reviews .reviewsContent .controls {
+        width: calc(5% - 10px);
+    }
+
+    .newsletter .newsletterContent p {
+        width: 80%;
+    }
+
+}
+
+/* lerger devices */
+@media (max-width: 760px) {
+
+    .navBar{
+        padding: 0px;
+    }
+    .menu {
+        position: fixed;
+        background-color: rgb(206, 190, 230);
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        width: 100%; 
+        transition: all 0.6s ease;
+        left: -100%;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+    .navBarContent .menu li {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .menu .signUpBtn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .newsletter .newsletterContent p {
+        width: 90%;
+    }
+
+    .services .servicesContent .card {
+        width: calc(50% - 20px);
+        margin-top: 25px;
+    }
+}
+
+/* small devices view  */
+@media (max-width: 600px) {
+    .welcomeSection .welcomeSectionContent .text{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .welcomeSection .welcomeSectionContent .welcomeGraphicDesign{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .services .servicesContent .card {
+        width: calc(100% - 20px);
+        margin-top: 25px;
+    }
+    .about .aboutContent .welcomeGraphicDesign {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about .aboutContent .text {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .reviews .reviewsContent{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .reviews .reviewsContent .user {
+        width: 100%;
+    }
+    .reviews .reviewsContent .user .clientPic {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .reviews .reviewsContent .user .clientMsg {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .reviews .reviewsContent .controls {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newsletter .newsletterContent p {
+        width: 100%;
+    }
+    .newsletter .newsletterContent .email {
+        width: 100%;
+    }
+
+    .newsletter .newsletterContent .email .email {
+        width: 70%;
+    }
+    .newsletter .newsletterContent .email .subscribeBtn  {
+        width: 30%;
+    }
+
+    footer .footerContent p {
+        width: 100%;
+    }
+    footer .logos {
+        width: 40%;
+    }
+}
