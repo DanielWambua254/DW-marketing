@@ -735,6 +735,9 @@ footer .bottomDiv {
 
 /* small devices view  */
 @media (max-width: 600px) {
+    .navBar .navBarContent .logo {
+        margin-left: 20px;
+    }
     .welcomeSection .welcomeSectionContent .text{
         width: 90%;
         margin-bottom: 20px;
@@ -744,7 +747,7 @@ footer .bottomDiv {
         margin-top: 20px;
     }
     .services .servicesContent .card {
-        width: calc(100% - 20px);
+        width: 100%;
         margin-top: 25px;
     }
     .about .aboutContent .welcomeGraphicDesign {
