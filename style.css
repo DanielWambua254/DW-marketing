@@ -635,6 +635,7 @@ footer .bottomDiv {
     background-color: rgb(181, 153, 207);
     color: black;
     margin-bottom: 1px;
+    
 }
 
 /* responsiveness */
@@ -741,14 +742,24 @@ footer .bottomDiv {
     .welcomeSection .welcomeSectionContent .text{
         width: 90%;
         margin-bottom: 20px;
+        padding-left: 10px;
     }
     .welcomeSection .welcomeSectionContent .welcomeGraphicDesign{
         width: 80%;
         margin-top: 20px;
     }
+    .services .servicesContent {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .services .servicesContent .card {
         width: 100%;
         margin-top: 25px;
+    }
+    .about, .aboutContent {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .about .aboutContent .welcomeGraphicDesign {
         width: 100%;
@@ -757,6 +768,10 @@ footer .bottomDiv {
     .about .aboutContent .text {
         width: 100%;
         margin-top: 20px;
+    }
+    .reviews {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .reviews .reviewsContent{
         width: 100%;
@@ -774,6 +789,7 @@ footer .bottomDiv {
     .reviews .reviewsContent .user .clientMsg {
         width: 100%;
         margin-top: 10px;
+        margin-left: 0px;
     }
 
     .reviews .reviewsContent .controls {
@@ -782,6 +798,11 @@ footer .bottomDiv {
         flex-direction: row;
     }
 
+    .newsletter {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .newsletter .newsletterContent p {
         width: 100%;
     }
@@ -798,8 +819,12 @@ footer .bottomDiv {
 
     footer .footerContent p {
         width: 100%;
+        font-size: 14px;
     }
     footer .logos {
         width: 40%;
+    }
+    footer .bottomDiv {
+        font-size: 12px;
     }
 }
