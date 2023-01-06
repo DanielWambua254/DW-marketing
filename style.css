@@ -146,7 +146,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 40px;
 }
 
@@ -211,7 +211,7 @@ html {
 }
 
 .services {
-    padding: 100px 0;
+    padding: 90px 0;
 
 }
 
@@ -229,7 +229,7 @@ html {
     font-size: 30px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     padding: 20px;
 }
 
@@ -740,12 +740,18 @@ footer .bottomDiv {
         margin-left: 20px;
     }
     .welcomeSection .welcomeSectionContent .text{
-        width: 90%;
+        width: 100%;
         margin-bottom: 20px;
         padding-left: 10px;
+        padding-right: 10px;
+    }
+    .welcomeSectionContent, .welcomeSection{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
     .welcomeSection .welcomeSectionContent .welcomeGraphicDesign{
-        width: 80%;
+        width: 100%;
         margin-top: 20px;
     }
     .services .servicesContent {
@@ -758,8 +764,12 @@ footer .bottomDiv {
     }
     .about, .aboutContent {
         width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about .aboutContent .text {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .about .aboutContent .welcomeGraphicDesign {
         width: 100%;
